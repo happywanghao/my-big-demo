@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <meta name="viewport" content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script>
+        document.documentElement.style.fontSize=document.documentElement.clientWidth / 10.8 + "px";
+    </script>
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -22,6 +25,8 @@
     <title>React App</title>
   </head>
   <body>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=h60kMdXBxcFeuem79GOZQtctxg1O3QTA"></script>
+    <script> window.BMap=BMap</script>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
