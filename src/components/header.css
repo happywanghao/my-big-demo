@@ -1,5 +1,12 @@
 .header{
-  background:red;
+  background:#FFDB4C;
   width: 10.8rem;
   height:1.5rem;
+}
+.header .title{
+  text-align: center;
+  font-size: 0.7rem;
+  color:#fff;
+  height: 1.5rem;
+  line-height: 1.5rem;
 }

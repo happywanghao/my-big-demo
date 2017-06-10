@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-class App extends React.Component{
+class SignForm extends React.Component{
   constructor(){
     super()
     this.formSubmit=this.formSubmit.bind(this)
@@ -35,4 +35,4 @@ class App extends React.Component{
     )
   }
 }
-export default App
+export default SignForm

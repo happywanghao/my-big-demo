@@ -1,30 +1,20 @@
 import {combineReducers} from 'redux'
-let rootData={
-  sign:{state:'signIn',username:'',}
-}
-function registerReducer(state=[],action){
+
+function routerReducer(state='',action){
   switch(action.type){
-    case 'ADDLIST':
-      return [...state,{title:action.content,complete:false,id:Date.now()}]
-    case 'TOCOMPLETE':
-      let newState=state.map(
-        item=>(
-          {...item,complete: item.id.toString()===action.content ? !item.complete : item.complete}
-        )
-      )
-      return newState
+    case 'ROUTER':
+      return action.content
     default:
       return state
   }
 }
-function stateRerucer(state=nowState,action){
+function positionReducer(store={},action){
   switch(action.type){
-    case 'SHOWSTATE':
-      return {
-        filter:action.content
-      }
+    case 'POSITION':
+      return action.content
     default:
-      return state
+      return store
   }
 }
-export default combineReducers({list:listReducer,nowState:stateRerucer})
+
+export default combineReducers({nowRouter:routerReducer,position:positionReducer})
