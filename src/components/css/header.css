@@ -1,0 +1,35 @@
+.header{
+  position: relative;
+  background:#FFDB4C;
+  width: 10.8rem;
+  height:1.5rem;
+}
+.header .title{
+  z-index: 10;
+  margin: 0 auto;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  width: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color:#fff;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+.header .welcome{
+  padding: 0.3rem;
+  font-size: 0.4rem;
+  color:#4A4A4A;
+  height: 1.5rem;
+  line-height: 0.4rem;
+}
+.header .tosign{
+  padding: 0.3rem;
+  font-size: 0.4rem;
+  color:#4A4A4A;
+  height: 1.5rem;
+  line-height: 0.8srem;
+}

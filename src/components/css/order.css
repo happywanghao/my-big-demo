@@ -1,0 +1,5 @@
+.order{
+  flex-grow:1;
+  background: #ccc;
+  flex-shrink:0;
+}

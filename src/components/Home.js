@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery'
+import './css/home.css';
 import {connect} from 'react-redux'
 import {getNowRouter,addPosition} from '../redux/actions/actions.js'
 class Home extends React.Component{
@@ -11,7 +11,7 @@ class Home extends React.Component{
   render(){
     let position=this.props.position
     return (
-      <div>
+      <div className='home'>
         <p style={{width:'3rem',fontSize:'0.3rem',height:'1.5rem',padding:'0.5rem 0.2rem'}}>
           {
             position.city?

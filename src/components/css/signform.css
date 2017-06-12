@@ -1,0 +1,39 @@
+.signform{
+
+}
+input{
+  box-sizing: border-box;
+  background: #fff;
+  border:none;
+  margin: none;
+  padding: none;
+}
+.signform form div{
+  background: #fff;
+}
+.signform input{
+  width: 10.8rem;
+  height: 1.2rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.5rem;
+}
+.signform .input1{
+  border-bottom: 1px solid #ccc;
+}
+.sub_button{
+  color: rgba(107,69,10,.4);
+  background-color: #fdc900;
+  border:none;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  font-size: 0.5rem;
+  border-radius: 0.08rem;
+  display: block;
+  width: 9.5rem;
+  margin: 0.5rem auto;
+
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
+}

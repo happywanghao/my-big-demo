@@ -1,13 +1,14 @@
 import React from 'react';
+import './css/order.css'
 import {connect} from 'react-redux'
 import {getNowRouter} from '../redux/actions/actions.js'
 class Order extends React.Component{
   componentDidMount(){
-    this.props.dispatch(getNowRouter('我的订单'))
+    this.props.dispatch(getNowRouter('订单'))
   }
   render(){
     return (
-      <div>
+      <div className='order'>
         order
       </div>
     )

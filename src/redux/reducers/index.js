@@ -16,5 +16,19 @@ function positionReducer(store={},action){
       return store
   }
 }
-
-export default combineReducers({nowRouter:routerReducer,position:positionReducer})
+function userReducer(store={},action){
+  switch(action.type){
+    case 'REGISTER':
+      return action.content
+    case 'sessionStorageId':
+      return {...store,userId:action.content}
+    case 'GETUSERNAME' :
+      console.log(action.content);
+      return {...store,username:action.content}
+    case 'UNSIGN' :
+      return {}
+    default:
+      return store
+  }
+}
+export default combineReducers({nowRouter:routerReducer,position:positionReducer,user:userReducer})

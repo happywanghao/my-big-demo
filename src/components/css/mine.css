@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 324606 */
+  src: url('//at.alicdn.com/t/font_c4iijbqmhd1gu8fr.eot');
+  src: url('//at.alicdn.com/t/font_c4iijbqmhd1gu8fr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_c4iijbqmhd1gu8fr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_c4iijbqmhd1gu8fr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_c4iijbqmhd1gu8fr.svg#iconfont') format('svg');
+}
+.mine{
+  flex-grow:1;
+  background: #f0efed;
+  flex-shrink:0;
+}
+.mine_sign_switch{
+  display: flex;
+  justify-content:space-around;
+  height: 1.2rem;
+}
+.mine_sign_switch>a{
+  color:#333;
+  align-items:stretch;
+  flex-grow:1;
+  text-align: center;
+  font-size: 0.5rem;
+  width: 5.4rem;
+  line-height: 1.2rem;
+
+  border-right:1px solid #8E8E93;
+  border-bottom:1px solid #8E8E93;
+}
+.mine_sign_switch>a:last-child{
+  border-left:1px solid #8E8E93;
+}
+.mine_sign_switch>a:first-child{
+  border-right:1px solid #8E8E93;
+}
+.mine_sign_switch .navsign{
+  background: #fff;
+  border:none;
+}
+.mine_ul{
+  padding: 0 0.3rem;
+}
+.mine_ul>li{
+  padding: 0.4rem 0.1rem;
+  font-size: 0.5rem;
+  border-bottom: 1px solid #C7C7CC;
+}
+.mine .unsign{
+  margin: 0 auto;
+  margin-top:0.8rem;
+  border:1px solid #FFCD02;
+  color:#FFCD02;
+  font-size: 0.7rem;
+  height: 1rem;
+  text-align: center;
+  background: none;
+  width: 9rem;
+  display: block;
+}
+.mine .iconfont_mine_ul{
+  font-family:"iconfont" !important;
+  font-size: 0.5rem;
+  padding-right: 0.3rem;
+  color:#8E8E93;
+}
+.mine .right{
+  font-family:"iconfont" !important;
+  font-size: 0.5rem;
+  display: block;
+  float: right;
+  color:#8E8E93;
+}
