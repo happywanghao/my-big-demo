@@ -11,6 +11,7 @@
     font-size:0.8rem;font-style:normal;
   }
 .footer{
+  flex-shrink:0;
   display: flex;
   justify-content:space-around;
   align-items:center;

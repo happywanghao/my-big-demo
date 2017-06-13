@@ -1,0 +1,17 @@
+.search{
+  flex-grow: 1;
+  background: #F7F7F7;
+}
+.search .top{
+  width: 100%;
+  padding: 0.2rem;
+}
+.search form{
+
+}
+.search form input{
+  width: 8rem;
+  height: 0.9rem;
+  font-size: 0.4rem;
+  padding: 
+}

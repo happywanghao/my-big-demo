@@ -1,5 +1,5 @@
 .header{
-  position: relative;
+  flex-shrink:0;
   background:#FFDB4C;
   width: 10.8rem;
   height:1.5rem;

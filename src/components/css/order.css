@@ -1,5 +1,6 @@
 .order{
+  width: 100%;
   flex-grow:1;
   background: #ccc;
-  flex-shrink:0;
+  overflow: auto;
 }

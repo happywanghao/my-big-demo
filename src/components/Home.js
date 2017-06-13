@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/home.css';
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {getNowRouter,addPosition} from '../redux/actions/actions.js'
 class Home extends React.Component{
   state={}
@@ -12,15 +13,28 @@ class Home extends React.Component{
     let position=this.props.position
     return (
       <div className='home'>
-        <p style={{width:'3rem',fontSize:'0.3rem',height:'1.5rem',padding:'0.5rem 0.2rem'}}>
-          {
-            position.city?
-            <span>{position.city}&nbsp;{position.district}&nbsp;<br/>{position.street}</span>
-            :position.errorPosition?
-            position.errorPosition
-            :'正在定位...'
-          }
-        </p>
+        <div className="top">
+          <div className='position'>
+            <p>
+              <span className='iconfont'>&#xe604;</span>
+              {
+                position.city?
+                <span>{position.street}...</span>
+                :position.errorPosition?
+                position.errorPosition
+                :'加载中...'
+              }
+              <span className='iconfont'>&#xe601;</span>
+            </p>
+          </div>
+          <div className='search'>
+            <Link to='./search'>
+              <span className='iconfont'>&#xe600;</span>
+              &nbsp;输入商家名、商品名
+            </Link>
+          </div>
+        </div>
+
 
       </div>
     )

@@ -2,11 +2,6 @@ import axios from "axios"
 import $ from 'jquery'
 const addPosition=()=>(
   dispatch=>{
-    // axios.get('http://api.map.baidu.com/geocoder/v2/?output=json&ak=h60kMdXBxcFeuem79GOZQtctxg1O3QTA&location=39.902352,119.54601')
-    // .then(data=>{
-    //   console.log('ahahah');
-    //   dispatch({type:'POSITION',content:{...data.result.addressComponent}})
-    // })
       let showPosition=(position)=>{
         console.log('5555');
         $.ajax({
@@ -17,7 +12,6 @@ const addPosition=()=>(
             dispatch({type:'POSITION',content:{...data.result.addressComponent}})
           }
         });
-
       }
       let showError=error=>{
           dispatch({type:'POSITION',content:{errorPosition:'定位失败'}})

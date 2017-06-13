@@ -1,5 +1,50 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 324606 */
+  src: url('//at.alicdn.com/t/font_215wht39lmasv2t9.eot');
+  src: url('//at.alicdn.com/t/font_215wht39lmasv2t9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_215wht39lmasv2t9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_215wht39lmasv2t9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_215wht39lmasv2t9.svg#iconfont') format('svg');
+}
 .home{
   flex-grow:1;
   background: #ccc;
-  flex-shrink:0;
+  overflow: auto;
+}
+.home .top{
+  height:1.5rem;
+  background: #FFDB4C;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  padding: 0 0.2rem;
+}
+.home .iconfont{
+font-family:"iconfont" !important;
+font-size: 0.4rem;
+}
+.home .position{
+  padding: 0 0.2rem;
+  text-align: center;
+  width:auto;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.4rem;
+  color:#fff;
+  background:rgba(0,0,0,0.4);
+  border-radius: 0.4rem;
+}
+.search a{
+  display: block;
+  color:#898C90;
+}
+.home .search{
+  margin-left: 0.2rem;
+  padding: 0 0.2rem;
+  background: #fff;
+  font-size: 0.4rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-radius: 0.4rem;
+  text-align: left;
 }
