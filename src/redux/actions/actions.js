@@ -66,4 +66,15 @@ const signIn=(data,type)=>(
 )
 //注册和登录账户和读取用户名
 
-export { getNowRouter,addPosition,signIn}
+
+const search=(name)=>(
+  dispatch=>{
+    let data={key:name}
+    axios.post('http://petapi.haoduoshipin.com/shop/search',data)
+    .then(res=>{
+      dispatch({type:'SEARCH',content:res.data.shops})
+    })
+  }
+)
+//搜索商家
+export { getNowRouter,addPosition,signIn,search}

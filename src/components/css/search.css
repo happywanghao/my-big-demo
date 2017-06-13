@@ -7,11 +7,18 @@
   padding: 0.2rem;
 }
 .search form{
-
+  height: 0.9rem;
+  display: flex;
+  justify-content: space-between;
 }
 .search form input{
+  flex-grow: 3;
   width: 8rem;
   height: 0.9rem;
   font-size: 0.4rem;
-  padding: 
+}
+.search form button{
+  margin-left: 0.3rem;
+  flex-grow: 1;
+  height: 0.9rem;
 }

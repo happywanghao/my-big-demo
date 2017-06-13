@@ -31,4 +31,17 @@ function userReducer(store={},action){
       return store
   }
 }
-export default combineReducers({nowRouter:routerReducer,position:positionReducer,user:userReducer})
+function searchReducer(store=[],action){
+  switch(action.type){
+    case 'SEARCH':
+      return action.content
+    default:
+      return store
+  }
+}
+export default combineReducers({
+  nowRouter:routerReducer,
+  position:positionReducer,
+  user:userReducer,
+  searchList:searchReducer
+})
