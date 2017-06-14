@@ -43,7 +43,7 @@ class Search extends React.Component{
                 </ul>
               :this.state.inputVal.length>0?
                 <div className='noList'>
-                  <img src='http://xs01.meituan.net/waimai_i/img/kangaroo.ad18ec6c.png'/>
+                  <img alt='没找到' src='http://xs01.meituan.net/waimai_i/img/kangaroo.ad18ec6c.png'/>
                   <p>没有找到相关的商家或商品</p>
                 </div>
               :null

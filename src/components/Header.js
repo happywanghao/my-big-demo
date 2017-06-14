@@ -11,9 +11,9 @@ class Header extends React.Component{
     return (
       <div className='header'>
         {this.props.user.username?
-          <div className='welcome'>欢迎您:<br/>{this.props.user.username}</div>
+          <div className='welcome'><img alt='头像' className='user_head_portrait' src={this.props.user.user_head_portrait}/></div>
         :
-          <div className='tosign'><Link to='/mine/signin'>登录/注册</Link></div>
+          <div className='tosign'><Link to='/mine/signin'>请登录</Link></div>
         }
         <p className='title'>{this.props.nowRouter}</p>
       </div>

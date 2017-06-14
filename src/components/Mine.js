@@ -4,7 +4,8 @@ import {connect} from 'react-redux'
 import {NavLink,Route} from 'react-router-dom'
 import {getNowRouter} from '../redux/actions/actions.js'
 import SignForm from './SignForm.js'
-import PromptBox from './PromptBox'
+import PromptBox from './PromptBox.js'
+import HeadPortrait from './HeadPortrait.js'
 class Mine extends React.Component{
   state={
     PromptBox:false
@@ -29,8 +30,9 @@ class Mine extends React.Component{
           {
             this.props.user.username ?//登录状态
             <div>
+              <HeadPortrait username={this.props.user.username}/>
               <ul className="mine_ul">
-                <li>{this.props.user.username}</li>
+                <li style={{textAlign:'center'}}>{this.props.user.username}</li>
                 <li><span className='iconfont_mine_ul'>&#xe654;</span>收货地址管理<span className='right'>&#xe662;</span></li>
                 <li><span className='iconfont_mine_ul'>&#xe6c0;</span>商家代金<span className='right'>&#xe662;</span></li>
                 <li><span className='iconfont_mine_ul'>&#xe630;</span>意见反馈<span className='right'>&#xe662;</span></li>

@@ -25,6 +25,8 @@ function userReducer(store={},action){
     case 'GETUSERNAME' :
       console.log(action.content);
       return {...store,username:action.content}
+    case 'USERHEADPORTRAIT' :
+      return {...store,user_head_portrait:action.content}
     case 'UNSIGN' :
       return {}
     default:
