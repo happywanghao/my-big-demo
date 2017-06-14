@@ -35,6 +35,8 @@ function searchReducer(store=[],action){
   switch(action.type){
     case 'SEARCH':
       return action.content
+    case 'REMOVELIST':
+      return []
     default:
       return store
   }

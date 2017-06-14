@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/search.css'
-import {search} from '../redux/actions/actions.js'
+import {search,removeList} from '../redux/actions/actions.js'
 import {connect} from 'react-redux'
 import {getNowRouter} from '../redux/actions/actions.js'
 class Search extends React.Component{
@@ -16,7 +16,8 @@ class Search extends React.Component{
     })
     if(e.target.value){
       this.props.dispatch(search(e.target.value))
-      
+    }else{
+      this.props.dispatch(removeList())
     }
   }
   render(){

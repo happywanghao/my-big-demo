@@ -76,5 +76,12 @@ const search=(name)=>(
     })
   }
 )
+
+
+const removeList=()=>(
+  dispatch=>{
+      dispatch({type:'REMOVELIST'})
+    }
+)
 //搜索商家
-export { getNowRouter,addPosition,signIn,search}
+export { getNowRouter,addPosition,signIn,search,removeList}
