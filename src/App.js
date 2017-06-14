@@ -11,16 +11,12 @@ import Mine from './components/Mine.js'
 import Search from './components/Search.js'
 class App extends React.Component{
   componentDidMount(){
-    if(sessionStorage.userId){
-      this.props.dispatch({type:'sessionStorageId',content:JSON.parse(sessionStorage.userId)})
+    if(sessionStorage.userId&&JSON.parse(sessionStorage.userId)){
+      this.props.dispatch({type:'LOADUSERNAME',content:JSON.parse(sessionStorage.userId)})
       this.props.dispatch(signIn(JSON.parse(sessionStorage.userId),'GETUSERNAME'))
     }
   }
-  componentWillReceiveProps(newprops){
-    if(newprops.user.userId){
-      sessionStorage.userId=JSON.stringify(newprops.user.userId)
-    }
-  }
+
   render(){
     return (
         <Router>

@@ -37,6 +37,7 @@ const signIn=(data,type)=>(
         .then(res=>{
           alert(res.data.msg)
           dispatch({type:'REGISTER',content:res.data})
+          sessionStorage.userId=JSON.stringify(res.data.userId)
         })
         .catch(err=>alert(err.request.response))
         break
@@ -45,6 +46,8 @@ const signIn=(data,type)=>(
         .then(res=>{
           console.log(res.data.msg)
           dispatch({type:'REGISTER',content:{username:res.data.user,...res.data}})
+          console.log(res);
+          sessionStorage.userId=JSON.stringify(res.data.userId)
         })
         .catch((err)=>{alert(err.request.response)})
         break

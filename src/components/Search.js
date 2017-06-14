@@ -11,6 +11,7 @@ class Search extends React.Component{
     this.props.dispatch(getNowRouter('搜索'))
   }
   inputChange(e){
+    e.preventDefault()
     this.setState({
       inputVal:e.target.value
     })
@@ -27,6 +28,7 @@ class Search extends React.Component{
       <div className="search">
         <div className="top">
           <form onSubmit={this.inputChange.bind(this)}>
+            <span className='iconfont iconfont1'>&#xe600;</span>
             <input onChange={this.inputChange.bind(this)} placeholder='请输入商家、商品名' type='text'/>
             <button type='submit'>搜索</button>
           </form>

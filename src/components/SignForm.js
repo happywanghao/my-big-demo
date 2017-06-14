@@ -12,14 +12,14 @@ class SignForm extends React.Component{
     password:''
   }
   formSubmit(e){
-    let sign=this.props.match.params.id
+    let signId=this.props.match.params.id
     e.preventDefault()
     let data={
       username:this.state.name,
       password:this.state.password
     }
     if(data.username&&data.password){
-      this.props.dispatch(signIn(data,sign))
+      this.props.dispatch(signIn(data,signId))
       this.setState({name:'',password:''})
     }else{
       alert('用户名和密码不能为空')

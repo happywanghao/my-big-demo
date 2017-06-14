@@ -15,7 +15,7 @@ class Mine extends React.Component{
       this.props.history.push('/mine/signin')
     }
   }
-  unSign(){
+  signOut(){
     sessionStorage.userId=''
     this.props.dispatch({type:"UNSIGN"})
     this.setState({PromptBox:false})
@@ -53,7 +53,7 @@ class Mine extends React.Component{
             </div>
           }
           {this.state.PromptBox?
-            <PromptBox title='退出后将无法查看当前订单,确定退出吗?' cancel={this.PromptBoxNone.bind(this)} sure={this.unSign.bind(this)}/>
+            <PromptBox title='退出后将无法查看当前订单,确定退出吗?' cancel={this.PromptBoxNone.bind(this)} sure={this.signOut.bind(this)}/>
           :null
           }
       </div>

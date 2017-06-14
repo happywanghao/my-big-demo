@@ -20,7 +20,7 @@ function userReducer(store={},action){
   switch(action.type){
     case 'REGISTER':
       return action.content
-    case 'sessionStorageId':
+    case 'LOADUSERNAME':
       return {...store,userId:action.content}
     case 'GETUSERNAME' :
       console.log(action.content);
