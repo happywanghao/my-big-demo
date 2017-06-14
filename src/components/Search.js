@@ -13,33 +13,41 @@ class Search extends React.Component{
   inputChange(e){
     e.preventDefault()
     this.setState({
-      inputVal:e.target.value
+      inputVal:this.input.value
     })
-    if(e.target.value){
-      this.props.dispatch(search(e.target.value))
+    if(this.input.value){
+      this.props.dispatch(search(this.input.value))
     }else{
       this.props.dispatch(removeList())
     }
   }
   render(){
     let reg=new RegExp(this.state.inputVal,'g')
-    console.log(this.props.searchList);
     return (
       <div className="search">
         <div className="top">
           <form onSubmit={this.inputChange.bind(this)}>
             <span className='iconfont iconfont1'>&#xe600;</span>
-            <input onChange={this.inputChange.bind(this)} placeholder='请输入商家、商品名' type='text'/>
+            <input ref={it=>this.input=it} onChange={this.inputChange.bind(this)} placeholder='请输入商家、商品名' type='text'/>
             <button type='submit'>搜索</button>
           </form>
         </div>
         <div className="body">
-          <ul>
-            {this.props.searchList.map(item=>(
-              <li key={item._id} dangerouslySetInnerHTML={{__html:item.name.replace(reg,`<span style='color:red'>${this.state.inputVal}</span>`)
-              }}/>
-            ))}
-          </ul>
+            {
+              this.props.searchList.length>0?
+                <ul>
+                  {this.props.searchList.map(item=>(
+                    <li key={item._id} dangerouslySetInnerHTML={{__html:item.name.replace(reg,`<span style='color:red'>${this.state.inputVal}</span>`)
+                    }}/>
+                  ))}
+                </ul>
+              :this.state.inputVal.length>0?
+                <div className='noList'>
+                  <img src='http://xs01.meituan.net/waimai_i/img/kangaroo.ad18ec6c.png'/>
+                  <p>没有找到相关的商家或商品</p>
+                </div>
+              :null
+            }
         </div>
       </div>
     )

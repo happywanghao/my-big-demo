@@ -42,5 +42,27 @@
   margin-top:-0.3rem;
 }
 .search .body{
-  
+
+}
+.search .body ul{
+  background:#fff;
+}
+.search .body ul li{
+  padding-left: 0.2rem;
+  height: 1.5rem;
+  border-bottom: 1px solid #C7C7CC;
+  line-height: 1.5rem;
+}
+.search .body .noList{
+  padding-top: 2rem;
+}
+.search .body .noList img{
+  display: block;
+  margin: 0 auto;
+  width: 4rem;
+}
+.search .body .noList p{
+  text-align: center;
+  color:#8E8E93;
+  padding-top: 1rem;
 }
