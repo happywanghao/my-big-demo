@@ -14,7 +14,10 @@ class Search extends React.Component{
     this.setState({
       inputVal:e.target.value
     })
-    this.props.dispatch(search(e.target.value))
+    if(e.target.value){
+      this.props.dispatch(search(e.target.value))
+      
+    }
   }
   render(){
     let reg=new RegExp(this.state.inputVal,'g')
