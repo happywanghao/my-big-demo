@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router,Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {signIn} from './redux/actions/actions.js'
 import './app.css'

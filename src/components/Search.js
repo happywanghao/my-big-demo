@@ -26,7 +26,7 @@ class Search extends React.Component{
     return (
       <div className="search">
         <div className="top">
-          <form>
+          <form onSubmit={this.inputChange.bind(this)}>
             <input onChange={this.inputChange.bind(this)} placeholder='请输入商家、商品名' type='text'/>
             <button type='submit'>搜索</button>
           </form>
