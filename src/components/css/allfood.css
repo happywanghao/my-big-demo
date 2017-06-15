@@ -1,0 +1,30 @@
+.allfood{
+  flex-grow: 1;
+  overflow: auto;
+  background: #ccc;
+}
+.allfood ul li{
+  height:1.5rem;
+  line-height: 1.5rem;
+  background: #fff;
+  margin-top: 1px;
+}
+.allfood ul li img{
+  float: left;
+  display: block;
+  border-radius: 100%;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.05rem;
+}
+.allfood ul li span{
+  float: left;
+  display: block;
+  height:1.5rem;
+  line-height: 1.5rem;
+}
+.allfood ul li button{
+  display: block;
+  float: right;
+  margin-top: 0.3rem;
+}

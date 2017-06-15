@@ -43,9 +43,27 @@ function searchReducer(store=[],action){
       return store
   }
 }
+function shopListReducer(store=[],action){
+  switch(action.type){
+    case 'GETSHOPLIST':
+      return action.content
+    default:
+      return store
+  }
+}
+function foodListReducer(store=[],action){
+  switch(action.type){
+    case 'GETFOOTLIST':
+      return action.content
+    default:
+      return store
+  }
+}
 export default combineReducers({
   nowRouter:routerReducer,
   position:positionReducer,
   user:userReducer,
-  searchList:searchReducer
+  searchList:searchReducer,
+  shopList:shopListReducer,
+  foodList:foodListReducer
 })

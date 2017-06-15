@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 324606 */
+  src: url('//at.alicdn.com/t/font_44wcl2hd3fbhuxr.eot');
+  src: url('//at.alicdn.com/t/font_44wcl2hd3fbhuxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_44wcl2hd3fbhuxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_44wcl2hd3fbhuxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_44wcl2hd3fbhuxr.svg#iconfont') format('svg');
+}
 .header{
   position: relative;
   flex-shrink:0;
@@ -18,10 +26,10 @@
   bottom:0;
   left: 0;
   right: 0;
-  width: 2rem;
   text-align: center;
   font-size: 0.7rem;
   color:#fff;
+  width: 60%;
   height: 1.5rem;
   line-height: 1.5rem;
 }
@@ -32,7 +40,8 @@
   height: 1.5rem;
   line-height: 0.8rem;
   position: absolute;
-  right: 0.3rem;
+  right: 0.2rem;
+  top:-0.1rem;
 }
 .header .tosign{
   padding: 0.3rem;
@@ -41,7 +50,8 @@
   height: 1.5rem;
   line-height: 0.8srem;
   position: absolute;
-  right: 0.3rem;
+  right: 0.2rem;
+  top:0.1rem;
 }
 .header .user_head_portrait{
   border-radius: 50%;
@@ -49,3 +59,17 @@
   height: 1rem;
 
 }
+.iconfont{
+    font-family:"iconfontyyy" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .header .back{
+    position: relative;
+    z-index: 20;
+    color:#fff;
+    line-height: 1.5rem;
+    padding-left: 0.3rem;
+  }

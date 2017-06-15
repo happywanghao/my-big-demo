@@ -2,14 +2,16 @@ import React from 'react';
 import './css/home.css';
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {getNowRouter,addPosition} from '../redux/actions/actions.js'
+import {getNowRouter,addPosition,getShopList} from '../redux/actions/actions.js'
 class Home extends React.Component{
   state={}
   componentDidMount(){
     this.props.dispatch(addPosition())
     this.props.dispatch(getNowRouter('首页'))
+    this.props.dispatch(getShopList())
   }
   render(){
+
     let position=this.props.position
     return (
       <div className='home'>
@@ -34,14 +36,21 @@ class Home extends React.Component{
             </Link>
           </div>
         </div>
-
+        <div className='content'>
+          <ul>
+          {this.props.shopList.map(item=>(
+            <li key={item._id}><Link to={`/${item.name}/allfood`}>{item.name}</Link></li>
+          ))}
+          </ul>
+        </div>
 
       </div>
     )
   }
 }
 const mapStateToProps=store=>({
-  position:store.position
+  position:store.position,
+  shopList:store.shopList
 })
 export default connect(mapStateToProps)(Home)
 //39.902309

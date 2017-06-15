@@ -9,6 +9,7 @@ import Home from './components/Home.js'
 import Order from './components/Order.js'
 import Mine from './components/Mine.js'
 import Search from './components/Search.js'
+import AllFood from './components/AllFood.js'
 class App extends React.Component{
   componentDidMount(){
     if(sessionStorage.userId&&JSON.parse(sessionStorage.userId)){
@@ -18,25 +19,26 @@ class App extends React.Component{
   }
 
   render(){
+    let nowRouter=this.props.nowRouter
     return (
         <Router>
           <div className='app'>
-            <Header/>
-            {/* <div id='main'> */}
+            <Route component={Header}/>
               <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/order' component={Order}/>
                 <Route path='/mine' component={Mine}/>
                 <Route path='/search' component={Search}/>
+                <Route path='/:id/allfood' component={AllFood}/>
               </Switch>
-            {/* </div> */}
-            <Footer/>
+            {nowRouter==='首页'||nowRouter==='订单'||nowRouter==='我的'?<Footer/>:null}
           </div>
         </Router>
     )
   }
 }
 const mapStateToProps=(store)=>({
-  user:store.user
+  user:store.user,
+  nowRouter:store.nowRouter
 })
 export default connect(mapStateToProps)(App)

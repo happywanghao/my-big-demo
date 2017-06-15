@@ -48,3 +48,17 @@ font-size: 0.4rem;
   border-radius: 0.4rem;
   text-align: left;
 }
+.home .content ul{
+
+}
+.home .content ul li{
+  padding-left: 0.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  background: #fff;
+  margin-top: 1px;
+}
+.home .content ul li a{
+  display: block;
+  color:#000;
+}

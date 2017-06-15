@@ -78,7 +78,14 @@ const search=(name)=>(
     })
   }
 )
-
+const getShopList=()=>(
+  dispatch=>{
+    axios.get('http://petapi.haoduoshipin.com/shops')
+    .then(res=>{
+      dispatch({type:"GETSHOPLIST",content:res.data.shops})
+    })
+  }
+)
 
 const removeList=()=>(
   dispatch=>{
@@ -86,4 +93,14 @@ const removeList=()=>(
     }
 )
 //搜索商家
-export { getNowRouter,addPosition,signIn,search,removeList}
+const getFootList=(id)=>(
+  dispatch=>{
+    axios.get('http://petapi.haoduoshipin.com/products')
+    .then(res=>{
+      console.log(res.data.products)
+      dispatch({type:'GETFOOTLIST',content:res.data.products})
+    })
+  }
+)
+
+export { getNowRouter,addPosition,signIn,search,removeList,getShopList,getFootList}
