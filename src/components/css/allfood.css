@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 324606 */
+  src: url('//at.alicdn.com/t/font_0u7q8nelhnbnvcxr.eot');
+  src: url('//at.alicdn.com/t/font_0u7q8nelhnbnvcxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_0u7q8nelhnbnvcxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_0u7q8nelhnbnvcxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_0u7q8nelhnbnvcxr.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
 .allfood{
   flex-grow: 1;
   overflow: auto;
@@ -26,5 +40,7 @@
 .allfood ul li button{
   display: block;
   float: right;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
+  box-shadow: none;
+  border: none;
 }

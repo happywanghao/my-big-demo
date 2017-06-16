@@ -59,11 +59,22 @@ function foodListReducer(store=[],action){
       return store
   }
 }
+function ShoppingCartReducer(store={},action){
+  switch(action.type){
+    case 'SHOWFOODLIST':
+      return {...store,showFoodList:action.content}
+    case 'SHOPPINGCARTOTAL'
+      return {...store,total:action.content}
+    default:
+      return store
+  }
+}
 export default combineReducers({
   nowRouter:routerReducer,
   position:positionReducer,
   user:userReducer,
   searchList:searchReducer,
   shopList:shopListReducer,
-  foodList:foodListReducer
+  foodList:foodListReducer,
+  ShoppingCart:ShoppingCartReducer
 })
