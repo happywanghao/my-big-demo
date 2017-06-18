@@ -93,7 +93,7 @@ const removeList=()=>(
     }
 )
 //搜索商家
-const getFootList=(id)=>(
+const getFoodList=(id)=>(
   dispatch=>{
     axios.get('http://petapi.haoduoshipin.com/products')
     .then(res=>{
@@ -103,4 +103,4 @@ const getFootList=(id)=>(
   }
 )
 
-export { getNowRouter,addPosition,signIn,search,removeList,getShopList,getFootList}
+export { getNowRouter,addPosition,signIn,search,removeList,getShopList,getFoodList}

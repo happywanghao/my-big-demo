@@ -55,15 +55,17 @@ function foodListReducer(store=[],action){
   switch(action.type){
     case 'GETFOOTLIST':
       return action.content
+    case 'GETFOOTLISTADDNUM':
+      return action.content
     default:
       return store
   }
 }
-function ShoppingCartReducer(store={},action){
+function shoppingCartReducer(store={},action){
   switch(action.type){
-    case 'SHOWFOODLIST':
-      return {...store,showFoodList:action.content}
-    case 'SHOPPINGCARTOTAL'
+    case 'SHOPPINGCARFOODLIST':
+      return {...store,shoppingCarFoodList:action.content}
+    case 'SHOPPINGCARTOTAL':
       return {...store,total:action.content}
     default:
       return store
@@ -76,5 +78,5 @@ export default combineReducers({
   searchList:searchReducer,
   shopList:shopListReducer,
   foodList:foodListReducer,
-  ShoppingCart:ShoppingCartReducer
+  shoppingCart:shoppingCartReducer
 })
