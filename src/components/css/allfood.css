@@ -80,6 +80,7 @@
   float: left;
 }
 .allfood .settlement{
+  display: block;
   float:right;
   background: #ffd300;
   color: #6b450a;

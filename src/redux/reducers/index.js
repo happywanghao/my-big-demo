@@ -63,8 +63,8 @@ function foodListReducer(store=[],action){
 }
 function shoppingCartReducer(store={},action){
   switch(action.type){
-    case 'SHOPPINGCARFOODLIST':
-      return {...store,shoppingCarFoodList:action.content}
+    case 'SHOPPINGCARTFOODLIST':
+      return {...store,shoppingCartFoodList:action.content}
     case 'SHOPPINGCARTOTAL':
       return {...store,total:action.content}
     default:

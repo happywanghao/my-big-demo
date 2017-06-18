@@ -39,7 +39,7 @@ class Home extends React.Component{
         <div className='content'>
           <ul>
           {this.props.shopList.map(item=>(
-            <li key={item._id}><Link to={`/${item.name}/allfood`}>{item.name}</Link></li>
+            <li key={item._id}><Link to={`/restaurant/${item.name}/allfood`}>{item.name}</Link></li>
           ))}
           </ul>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import './css/allfood.css'
 import {getFoodList,getNowRouter} from '../redux/actions/actions.js'
+import {Link} from 'react-router-dom'
 class AllFood extends React.Component{
   state={aa:1}
   constructor(){
@@ -18,13 +19,15 @@ class AllFood extends React.Component{
     this.props.dispatch({type:'GETFOOTLISTADDNUM',content:bb})
     setTimeout(()=>{
       let res=this.props.foodList.map(it=>(it.num*it.price)).reduce((a,b)=>(a+b))
+      let shoppingCarFoodList=this.props.foodList.filter(item=>(item.num>0))
       this.props.dispatch({type:'SHOPPINGCARTOTAL',content:res})
+      this.props.dispatch({type:'SHOPPINGCARTFOODLIST',content:shoppingCarFoodList})
     },0)
   }
 
   componentWillReceiveProps(newProps){
-    if(newProps.foodList.length>0 && !newProps.foodList[0].num && this.state.aa){
-      this.props.dispatch({type:'GETFOOTLISTADDNUM',content:newProps.foodList.map(it=>({...it,num:0}))})
+    if(newProps.foodList.length>0 && !newProps.foodList[0]._num && this.state.aa){
+      this.props.dispatch({type:'GETFOOTLISTADDNUM',content:newProps.foodList.map(it=>({...it,num:0,_num:true}))})
       this.setState({aa:0})
     }
   }
@@ -64,7 +67,7 @@ class AllFood extends React.Component{
                 <p className='total'>¥{this.props.shoppingCart.total}</p>
                 <p className='explain'>配送费以订单为准</p>
               </div>
-              <div className="settlement">去结算</div>
+              <Link to='/orderconfirm' className="settlement">去结算</Link>
           </div>
         :
           <div className='shoppingcart'>

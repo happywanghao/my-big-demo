@@ -10,6 +10,7 @@ import Order from './components/Order.js'
 import Mine from './components/Mine.js'
 import Search from './components/Search.js'
 import AllFood from './components/AllFood.js'
+import OrderConfirm from './components/OrderConfirm.js'
 class App extends React.Component{
   componentDidMount(){
     if(sessionStorage.userId&&JSON.parse(sessionStorage.userId)){
@@ -29,7 +30,8 @@ class App extends React.Component{
                 <Route path='/order' component={Order}/>
                 <Route path='/mine' component={Mine}/>
                 <Route path='/search' component={Search}/>
-                <Route path='/:id/allfood' component={AllFood}/>
+                <Route path='/restaurant/:id/allfood' component={AllFood}/>
+                <Route path='/orderconfirm' component={OrderConfirm}/>
               </Switch>
             {nowRouter==='首页'||nowRouter==='订单'||nowRouter==='我的'?<Footer/>:null}
           </div>
