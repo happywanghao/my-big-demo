@@ -19,7 +19,7 @@ class SignForm extends React.Component{
       password:this.state.password
     }
     if(data.username&&data.password){
-      this.props.dispatch(signIn(data,signId))
+      this.props.dispatch(signIn(data,signId,this.props.history.push))
       this.setState({name:'',password:''})
     }else{
       alert('用户名和密码不能为空')

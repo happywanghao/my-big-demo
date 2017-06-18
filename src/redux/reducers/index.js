@@ -53,6 +53,8 @@ function shopListReducer(store=[],action){
 }
 function foodListReducer(store=[],action){
   switch(action.type){
+    case 'RESETFOODLISTNUM':
+      return []
     case 'GETFOOTLIST':
       return action.content
     case 'GETFOOTLISTADDNUM':
@@ -63,6 +65,10 @@ function foodListReducer(store=[],action){
 }
 function shoppingCartReducer(store={},action){
   switch(action.type){
+    case 'RESETSHOPPINGCART':
+      return{}
+    case 'ADDREMARKS':
+      return{...store,remarks:action.content}
     case 'SHOPPINGCARTFOODLIST':
       return {...store,shoppingCartFoodList:action.content}
     case 'SHOPPINGCARTOTAL':

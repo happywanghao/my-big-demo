@@ -13,7 +13,11 @@ class Header extends React.Component{
         <div onClick={()=>{this.props.history.goBack()}} ><span className='iconfont back'>&#xe605;</span></div>
         }
         {this.props.user.username?
-          <div className='welcome'><img alt='头像' className='user_head_portrait' src={this.props.user.user_head_portrait}/></div>
+          <div className='welcome'>
+            <Link to='/mine'>
+              <img alt='头像' className='user_head_portrait' src={this.props.user.user_head_portrait}/>
+            </Link>
+          </div>
         :
           <div className='tosign'><Link to='/mine/signin'>请登录</Link></div>
         }
