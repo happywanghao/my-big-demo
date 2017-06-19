@@ -1,5 +1,6 @@
 import React from 'react';
-import './css/search.css'
+import './css/search.css';
+import {Link} from 'react-router-dom';
 import {search,removeList} from '../redux/actions/actions.js'
 import {connect} from 'react-redux'
 import {getNowRouter} from '../redux/actions/actions.js'
@@ -37,8 +38,12 @@ class Search extends React.Component{
               this.props.searchList.length>0?
                 <ul>
                   {this.props.searchList.map(item=>(
-                    <li key={item._id} dangerouslySetInnerHTML={{__html:item.name.replace(reg,`<span style='color:red'>${this.state.inputVal}</span>`)
-                    }}/>
+                    <li  key={item._id} >
+                      <Link to={`/restaurant/${item.name}/allfood`}>
+                          <span dangerouslySetInnerHTML={{__html:item.name.replace(reg,`<span style='color:red'>${this.state.inputVal}</span>`)
+                        }}/>
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               :this.state.inputVal.length>0?

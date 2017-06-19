@@ -15,6 +15,7 @@ class Mine extends React.Component{
     if(!this.props.user.username){
       this.props.history.push('/mine/signin')
     }
+  
   }
   signOut(){
     sessionStorage.userId=''

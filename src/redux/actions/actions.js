@@ -28,7 +28,7 @@ const getNowRouter=(pos)=>(
   )
 )
 //显示当前路由位置
-const signIn=(data,type,push)=>(
+const signIn=(data,type,history)=>(
   dispatch=>{
     switch(type){
       case 'signup':
@@ -36,7 +36,8 @@ const signIn=(data,type,push)=>(
         .then(res=>{
           alert(res.data.msg)
           dispatch({type:'REGISTER',content:res.data})
-          push('/')
+          history.goBack()
+          history.goBack()
           sessionStorage.userId=JSON.stringify(res.data.userId)
         })
         .catch(err=>alert(err.request.response))
@@ -45,7 +46,8 @@ const signIn=(data,type,push)=>(
         axios.post('http://petapi.haoduoshipin.com/user/signin',data)
         .then(res=>{
           console.log(res.data.msg)
-          push('/')
+          history.goBack()
+          history.goBack()
           dispatch({type:'REGISTER',content:{username:res.data.user,...res.data}})
           sessionStorage.userId=JSON.stringify(res.data.userId)
         })
@@ -62,7 +64,6 @@ const signIn=(data,type,push)=>(
       default:
         return false
         // .catch(err=>alert('用户名重复'))
-
     }
 
   }
